@@ -1,107 +1,82 @@
-Analisis Strategis Ulasan Produk Flipkart
-Ekstraksi Insight Menggunakan IBM Granite LLM
-
-Deskripsi:
-Analisis ulasan produk Flipkart menggunakan IBM Granite LLM untuk mengekstraksi insight bisnis yang actionable dan memperbaiki inkonsistensi sentimen. Proyek ini bertujuan mengubah ribuan ulasan tidak terstruktur menjadi informasi strategis yang mendukung keputusan bisnis.
+Analisis Strategis Ulasan Produk Flipkart: Ekstraksi Insight Menggunakan IBM Granite LLM
+Deskripsi
+Proyek ini melakukan analisis mendalam terhadap ulasan produk Flipkart menggunakan IBM Granite LLM untuk mengekstraksi insight bisnis yang actionable. Tujuan utamanya adalah mengubah ribuan ulasan tidak terstruktur—terutama yang memiliki inkonsistensi antara rating dan sentimen—menjadi informasi strategis yang akurat untuk mendukung pengambilan keputusan bisnis.
 
 🔹 Project Overview
+Di tengah persaingan e-commerce yang ketat, ulasan pelanggan telah menjadi aset data strategis. Analisis awal pada dataset ulasan produk Flipkart menunjukkan adanya inkonsistensi signifikan antara rating bintang yang diberikan pelanggan dan sentimen teks ulasan. Masalah ini dapat mengaburkan pemahaman nyata tentang kepuasan pelanggan dan menghambat perumusan strategi yang efektif.
 
-Ulasan pelanggan kini menjadi aset data strategis di era e-commerce yang kompetitif. Analisis awal pada dataset Flipkart menunjukkan adanya inkonsistensi signifikan antara rating dan sentimen, yang dapat mengaburkan pemahaman tentang kepuasan pelanggan.
+Tujuan proyek ini adalah:
 
-Tujuan proyek:
+Mengidentifikasi pola tersembunyi di balik kepuasan dan keluhan pelanggan.
 
-Mengidentifikasi pola tersembunyi dalam ulasan.
+Mengoreksi label sentimen yang tidak konsisten menggunakan kemampuan kontekstual AI.
 
-Mengoreksi label sentimen yang salah menggunakan AI.
-
-Memberikan rekomendasi strategis untuk tim produk, pemasaran, dan layanan pelanggan.
+Memberikan rekomendasi strategis yang tajam untuk tim produk, pemasaran, dan layanan pelanggan.
 
 🔹 Rumusan Masalah
+Apa pendorong utama di balik kepuasan dan kekecewaan pelanggan secara spesifik?
 
-Apa pendorong utama kepuasan dan kekecewaan pelanggan secara spesifik?
+Pola tersembunyi apa yang ada dalam keluhan yang terkait dengan produk atau kategori tertentu?
 
-Pola tersembunyi apa yang ada dalam keluhan terkait produk tertentu?
-
-Bagaimana memprioritaskan perbaikan produk atau layanan untuk meningkatkan loyalitas pelanggan?
+Bagaimana cara memprioritaskan perbaikan produk atau layanan untuk memberikan dampak terbesar pada loyalitas pelanggan?
 
 🔹 Tujuan Proyek
+Klasifikasi Sentimen Akurat: Mengklasifikasikan ulasan menjadi positif, negatif, dan netral menggunakan IBM Granite LLM untuk mengatasi inkonsistensi data.
 
-Klasifikasi Sentimen Akurat: Mengklasifikasikan ulasan menjadi positif, negatif, dan netral menggunakan IBM Granite LLM.
+Ekstraksi Tema Utama: Meringkas ribuan ulasan untuk menemukan tema utama dari keluhan (misal: "kualitas pengiriman", "ukuran tidak sesuai") dan pujian (misal: "daya tahan baterai", "desain elegan").
 
-Ekstraksi Tema Utama: Meringkas ribuan ulasan untuk menemukan tema utama keluhan dan pujian (misal: "kualitas pengiriman", "daya tahan baterai").
+Identifikasi Faktor Kunci: Menemukan faktor-faktor yang paling krusial dalam memengaruhi rating dan sentimen pelanggan.
 
-Identifikasi Faktor Kunci: Menemukan faktor yang paling mempengaruhi rating dan sentimen pelanggan.
-
-Rekomendasi Strategis: Menyusun rekomendasi actionable untuk meningkatkan pengalaman pelanggan dan performa produk.
+Rekomendasi Strategis: Menyusun rekomendasi yang actionable untuk meningkatkan pengalaman pelanggan dan performa produk.
 
 🔹 Metodologi
+Proyek ini dijalankan dengan alur kerja yang sistematis:
 
-Alur kerja proyek:
+Pemahaman Bisnis: Menentukan tujuan dan metrik keberhasilan proyek.
 
-Pemahaman Bisnis: Menentukan tujuan dan metrik keberhasilan.
+Akuisisi & Preprocessing Data: Memuat dataset dari Kaggle, membersihkan data (menangani missing values & duplikat), dan normalisasi teks.
 
-Akuisisi & Preprocessing Data:
+Exploratory Data Analysis (EDA): Melakukan analisis mendalam terhadap distribusi sentimen dan rating, panjang teks ulasan, analisis kata umum (termasuk WordCloud), serta menganalisis hubungan antara harga dan rating untuk menemukan outlier dan inkonsistensi.
 
-Load dataset dari Kaggle.
+Pemodelan dengan IBM Granite LLM: Menerapkan model untuk klasifikasi sentimen dan ekstraksi tema utama dari ulasan.
 
-Cek missing values dan duplikat.
-
-Normalisasi teks review.
-
-Exploratory Data Analysis (EDA):
-
-Distribusi sentimen dan rating.
-
-Panjang teks review.
-
-Analisis kata umum, bigram, trigram, dan WordCloud.
-
-Hubungan harga dengan rating.
-
-Analisis outlier review tidak konsisten.
-
-Pemodelan dengan IBM Granite LLM:
-
-Klasifikasi sentimen.
-
-Ekstraksi tema utama.
-
-Insight & Findings:
-
-Tema dan masalah tersembunyi.
-
-Faktor penentu rating.
-
-Pola outlier dan inkonsistensi.
-
-Benchmarking produk.
-
-Rekomendasi strategis untuk perbaikan produk dan pengalaman pelanggan.
-
-Deployment: Hasil analisis siap digunakan untuk mendukung keputusan bisnis.
+Analisis Hasil & Rekomendasi: Menganalisis insight yang dihasilkan dan merumuskan rekomendasi bisnis yang strategis.
 
 🔹 Dataset
-
-Sumber: Kaggle
-
-Flipkart Product Reviews Dataset
+Sumber: Flipkart Product Reviews Dataset di Kaggle
 
 🔹 Insight & Findings
+Inkonsistensi Data Terungkap: Analisis membuktikan adanya banyak ulasan dengan rating tinggi namun sentimen teksnya negatif, dan sebaliknya. AI berhasil mengoreksi ini.
 
-Inkonsistensi Data: Banyak ulasan rating tinggi diberi label negative dan sebaliknya.
+Identifikasi Produk Bermasalah: Ditemukan produk dengan keluhan kronis, contohnya MAHARAJA WHITELINE Air Cooler dengan keluhan utama pada "kualitas buruk" dan "tidak berguna."
 
-Produk Bermasalah Kronis: Contoh: MAHARAJA WHITELINE Air Cooler, keluhan utama: "kualitas buruk" dan "tidak berguna."
+Pola Keluhan per Kategori: Untuk kategori Fashion, keluhan "ukuran tidak sesuai" ternyata lebih dominan dibandingkan keluhan tentang kualitas kain.
 
-Tema Keluhan Kategori Fashion: "Ukuran tidak sesuai" lebih sering muncul daripada kualitas kain.
+Kualitas Mengalahkan Harga: Ditemukan bahwa rating positif lebih kuat dipengaruhi oleh kualitas dan fungsionalitas produk daripada sekadar harga yang murah.
 
-Kualitas Produk Lebih Penting daripada Harga: Rating positif lebih dipengaruhi kualitas dan fungsionalitas daripada harga.
+🔹 Rekomendasi & Aplikasi Bisnis
+Hasil analisis ini siap digunakan untuk mendukung keputusan bisnis yang berdampak:
+
+Untuk Tim Pemasaran: Menggunakan tema pujian utama (misal: "Kualitas Pendingin Terbaik") sebagai bahan utama untuk slogan dan kampanye promosi.
+
+Untuk Tim Produk: Memprioritaskan perbaikan pada produk-produk yang teridentifikasi memiliki keluhan kronis dan spesifik.
+
+Untuk Tim Layanan Pelanggan: Melatih tim untuk lebih memahami akar masalah keluhan pelanggan berdasarkan tema yang paling sering muncul.
+
+🔹 Cara Menjalankan Proyek
+Clone repositori ini: git clone https://github.com/49il/Analisis-Strategis-Ulasan-Produk-Flipkart-Ekstraksi-Insight-Menggunakan-IBM-Granite-LLM
+
+Buka file Analisis Strategis Ulasan Produk Flipkart_ Ekstraksi Insight Menggunakan IBM Granite LLM.ipynb di Google Colab.
+
+Pastikan dataset dari Kaggle telah diunggah atau tersedia di lingkungan Colab Anda.
+
+Jalankan semua sel secara berurutan untuk mereproduksi analisis dari awal hingga akhir.
 
 🔹 AI Support
+IBM Granite LLM memainkan peran sentral dalam proyek ini untuk:
 
-IBM Granite LLM digunakan untuk:
+Klasifikasi & Analisis Sentimen: Memahami konteks ulasan secara mendalam untuk mengoreksi label sentimen yang salah.
 
-Klasifikasi & Analisis Sentimen: Mengoreksi label yang salah dan memahami konteks ulasan.
+Summarization: Mengekstraksi dan meringkas tema-tema kunci dari ribuan ulasan, yang memungkinkan analisis produk dan kategori secara efisien.
 
-Summarization: Mengekstraksi tema utama dari ribuan ulasan untuk mendukung analisis produk dan kategori.
-
-Tujuan utama: mengubah dataset tidak konsisten menjadi aset data akurat untuk keputusan bisnis yang strategis.
+Tujuan utama penggunaan AI adalah untuk mengubah dataset yang tidak konsisten menjadi aset data yang akurat dan bernilai tinggi untuk pengambilan keputusan bisnis yang strategis
